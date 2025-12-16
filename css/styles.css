@@ -577,7 +577,7 @@ body {
 }
 
 .subscribe-wrapper {
-    margin-left: 80px;
+    margin-left: auto;
 }
 
 .subscribe-text {
@@ -643,6 +643,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button:hover,
@@ -673,7 +674,7 @@ body {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -835,6 +836,13 @@ body {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
 .form-textarea:hover,
 .form-textarea:focus {
     border-color: #4d5ae5;
@@ -913,4 +921,10 @@ body {
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover,
+.form-button:focus {
+    background-color: #404bbf;
 }
